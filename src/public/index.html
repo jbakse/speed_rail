@@ -6,5 +6,32 @@
 </head>
 <body>
 	<h1>Hello, World.</h1>
+
+	<input id="command"></input>
+	<button id="send_command">send</button>
+
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+	<script>
+		console.log("jquery", $);
+
+		var socket = io.connect(window.location.origin);
+		
+		$('#send_command').click ( function(){
+			console.log("click");
+			socket.emit("send_command", {command: $('#command').val() });
+		});
+
+		socket.on('news', function (data) {
+			console.log(data);
+			socket.emit('my other event', { my: 'data' });
+		});
+	
+
+	</script>
+
+
+
 </body>
 </html>

@@ -1,0 +1,22 @@
+{
+  "name": "speed_rail",
+  "version": "0.0.0",
+  "description": "",
+  "main": "speed_rail.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbakse/speed_rail.git"
+  },
+  "author": "",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/jbakse/speed_rail/issues"
+  },
+  "homepage": "https://github.com/jbakse/speed_rail",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}

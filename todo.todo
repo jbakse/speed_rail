@@ -1,0 +1,2 @@
+---	use gcode or tinyg json?
+x = (j / 6 * pow(t/2, 3)) * 2

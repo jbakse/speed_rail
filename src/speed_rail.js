@@ -1,3 +1,4 @@
+console.log("\n\n\n");
 console.log("Hello, Speed Rail!");
 
 
@@ -23,6 +24,8 @@ var io = require('socket.io')(server);
 io.on('connection', function (socket) {
 
 	socket.on('send_command', function (data) {
+		console.log("data",data);
+		console.log("data",data,""+data.command);
 		serialWrite(data.command);
 	});
 	
@@ -43,6 +46,7 @@ io.on('connection', function (socket) {
 // Serial Port
 var connectSettings = {
 	baudrate: 115200
+
 };
 
 var serialPort;
@@ -80,8 +84,23 @@ function serialRead(data) {
 	console.info('Serial data received: \n' + data);
 }
 
+
 function serialWrite(message) {
 	if (!serialPort.isOpen()) return;
+
+	q.push(message);
+	
+}
+
+var q = [];
+setInterval(checkQueue, 100);
+
+function checkQueue() {
+	message = q.shift();
+	// console.log("tick");
+	if (!message) return;
+
+	console.log("Write: \n===\n"+message+"\n---");
 
 	serialPort.write(message + "\n", function(err, results) {
 		if (err) console.error('Serial write error: \n' + err);

@@ -60,36 +60,44 @@
 								<h3 class="panel-title">Fast</h3>
 							</div>
 							<div class="panel-body">
-								<label for="start_x">Start Position</label>
+								<label for="start_x">Start Position <span class="unit">(mm)</span></label>
 								<div class="slider-group">
 									<input id="start_x" name="start_x" type="range" min="0" max="1300" value="0">
 									<div><input type="text"></div>
 								</div>
 
-								<label for="end_x">End Position</label>
+								<label for="end_x">End Position <span class="unit">(mm)</span></label>
 								<div class="slider-group">
 									<input id="end_x" name="end_x" type="range" min="0" max="1300" value="0">
 									<div><input type="text"></div>
 								</div>
 
-								<label for="xjm">Max Jerk (mm/min^3)</label>
+								<label for="xjm">Max Jerk <span class="unit">(mm/min^3)</span></label>
 								<div class="slider-group">
 									<input id="xjm" name="xjm" type="range" min="1000001" max="10000000000" value="5000000000">
 									<div><input type="text"></div>
 								</div>
 
-								<label for="xvm">Max Velocity (mm/min)</label>
+								<label for="xvm">Max Velocity <span class="unit">(mm/min)</span></label>
 								<div class="slider-group">
 									<input id="xvm" name="xvm" type="range" min="0" max="100000" value="1000">
 									<div><input type="text"></div>
 								</div>
 
 								
+								<button id="fast_start" class="btn btn-md ">Go to Start</button>
 
-								<button id="send_fast_move" class="btn btn-md btn-default">Got to Start</button>
+								<button id="fast_end" class="btn btn-md" >Run</button>
 
-								<button id="send_fast_move" class="btn btn-md btn-default">Run</button>
+							</div>
+						</div>
 
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">Log</h3>
+							</div>
+							<div class="panel-body">
+								Hello. Log.
 							</div>
 						</div>
 

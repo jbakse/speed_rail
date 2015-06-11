@@ -25,18 +25,27 @@ $( function() {
 	$('input[type="range"]').trigger("input");
 
 
-	$('#send_fast_move').click ( function(){
-		//move to start position
+	$('#fast_start').click ( function(){
+		
 		moveToPosition($('#start_x').val(), 60000, 10000);
-		//do move to end position
+		
+	});
+
+	$('#fast_end').click ( function(){
 		moveToPosition($('#end_x').val(), $('#xvm').val(), $('#xjm').val());
 	});
 
 	function moveToPosition(_position, _velocity, _jerk){
 		console.log("moveToPosition ", _position, _velocity, _jerk);
-		socket.emit("send_command", {command: "$xvm="+_velocity });
-		socket.emit("send_command", {command: "$xjm="+_jerk });
-		socket.emit("send_command", {command: "g0 x" + _position});
+
+
+		
+
+
+
+		socket.emit("send_command", {command: "{\"xvm\":"+_velocity+"}" });
+		socket.emit("send_command", {command: "{\"xjm\":"+_jerk+"}" });
+		socket.emit("send_command", {command: "{\"gc\":\"g0 x" + _position +"\"}"});
 	}
 });
 

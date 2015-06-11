@@ -1,67 +1,21 @@
-h1	{
-	color: green;
-}
-input{
-	display:block;
-	margin-bottom: 15px;
-}
-label .val{
-	font-weight: 600;
-	margin-left: 10px;
+
+
+.unit
+{
+	font-weight: 100;
 }
 
 
-input[type=range]{
-    -webkit-appearance: none;
-}
 
 
-input[type=range]::-webkit-slider-runnable-track {
-	-webkit-appearance: none;
 
-   
-    background: #ccc;
-   	height: 43px;
-    width: 100%;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 43px;
-    width: 20px;
-    background: #000;
-
-
-}
-
-input[type=range]:focus {
-    outline: none;
-}
-
-/*
-.input-group-addon .slider-output{
-	margin-bottom: 0px;
-	height: 43px;
-	padding: 10px 10px;
-	width: 100px;
-	background-color: black;
-	color: white;
-	border: none;
-	text-align: center;
-}
-
-.slider .input-group-addon{
-
-	border: none;
-}
-.input-group.slider{
-	margin-bottom: 20px;
-}*/
+/******** Slider Groups ********/
 
 .slider-group 
 {
 	display: table;
 	width: 100%;
+	margin-bottom: 15px;
 }
 
 .slider-group input[type=range]{}
@@ -87,3 +41,28 @@ input[type=range]:focus {
 	font-size: 22px;
 	text-align: center;
 }
+
+input[type=range]{
+	-webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	background: #ccc;
+	height: 43px;
+	width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 43px;
+	width: 20px;
+	background: #000;
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+
+
